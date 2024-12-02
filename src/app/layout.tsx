@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import Script from "next/script";
 
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
@@ -18,6 +19,7 @@ export default function RootLayout({
     <html lang="en" className={`${GeistSans.variable}`}>
       <body>
         <main>{children}</main>
+        <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
         <Analytics />
       </body>
     </html>
